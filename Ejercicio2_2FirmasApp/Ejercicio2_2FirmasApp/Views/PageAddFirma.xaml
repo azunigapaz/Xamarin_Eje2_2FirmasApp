@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"
+             x:Class="Ejercicio2_2FirmasApp.Views.PageAddFirma">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Label Text="Agregar firma"
+                Margin="0,20,0,0"
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand" />
+
+            <forms:SignaturePadView x:Name="FirmaPad" StrokeColor="Black" BackgroundColor="White" StrokeWidth="3" WidthRequest="100" HeightRequest="250"/>
+
+            <Entry
+                x:Name="txtNombre" 
+                Placeholder="Nombre" Margin="10,0,10,0"/>            
+            
+            <Entry
+                x:Name="txtDescripcion" 
+                Placeholder="Descripción" Margin="10,0,10,0"/>
+
+            <Button x:Name="btnAgregar" Text="Agregar Firma" Clicked="btnAgregar_Clicked" Margin="10,0,10,0" />
+            <Button x:Name="btnListar" Text="Consulta Firmas" Clicked="btnListar_Clicked" Margin="10,0,10,0" />
+            <Button x:Name="btnSalir" Text="Salir" Clicked="btnSalir_Clicked" Margin="10,0,10,0" />            
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

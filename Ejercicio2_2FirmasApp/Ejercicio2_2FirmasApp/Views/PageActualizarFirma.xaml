@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:forms="clr-namespace:SignaturePad.Forms;assembly=SignaturePad.Forms"             
+             x:Class="Ejercicio2_2FirmasApp.Views.PageActualizarFirma">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Actualizar firma"
+                Margin="0,20,0,0"
+                HeightRequest="50"
+                HorizontalOptions="CenterAndExpand" />
+            
+            <forms:SignaturePadView x:Name="FirmaPad" StrokeColor="Black" BackgroundColor="White" StrokeWidth="3" WidthRequest="100" HeightRequest="250"/>
+
+            <Entry x:Name="id" Placeholder="ID" Text="{Binding FirmaId}"  IsVisible="False" />
+
+            <Entry
+                x:Name="txtNombre" Text="{Binding FirmaNombre}"
+                Placeholder="Nombre" Margin="10,0,10,0"/>            
+            
+            <Entry
+                x:Name="txtDescripcion" Text="{Binding FirmaDescripcion}"
+                Placeholder="Descripción" Margin="10,0,10,0"/>
+
+            <Button x:Name="btnActualizar" Text="Actuaizar Firma" Clicked="btnActualizar_Clicked" Margin="10,0,10,0" />
+            <Button x:Name="btnRegresar" Text="Regresar" Clicked="btnRegresar_Clicked" Margin="10,0,10,0" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
